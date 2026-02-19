@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Task Manager</h1>
+
+    <div class="form">
+        <input type="text" id="title" placeholder="Task Title">
+        <input type="text" id="description" placeholder="Description">
+        <select id="priority">
+            <option value="low">Low</option>
+            <option value="medium" selected>Medium</option>
+            <option value="high">High</option>
+        </select>
+        <button onclick="createTask()">Add Task</button>
+    </div>
+
+    <div class="filters">
+        <button onclick="loadTasks()">All</button>
+        <button onclick="filterTasks('pending')">Pending</button>
+        <button onclick="filterTasks('completed')">Completed</button>
+    </div>
+
+    <div id="task-list"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

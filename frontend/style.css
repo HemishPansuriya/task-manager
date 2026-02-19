@@ -1,0 +1,172 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    min-height: 100vh;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    color: #ffffff;
+    margin-bottom: 30px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* Main Card Container */
+.form,
+.filters,
+#task-list {
+    width: 100%;
+    max-width: 750px;
+}
+
+/* Glass Effect Card */
+.form {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* Inputs */
+input,
+select {
+    padding: 12px 15px;
+    margin: 8px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    width: 28%;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+input:focus,
+select:focus {
+    box-shadow: 0 0 0 2px #667eea;
+}
+
+/* Buttons */
+button {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Primary Button */
+.form button {
+    background: #ffffff;
+    color: #667eea;
+}
+
+.form button:hover {
+    background: #667eea;
+    color: white;
+}
+
+/* Filter Buttons */
+.filters {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.filters button {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    margin: 5px;
+}
+
+.filters button:hover {
+    background: white;
+    color: #667eea;
+}
+
+/* Task Card */
+.task {
+    background: white;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.task:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Completed Task */
+.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+/* Task Buttons */
+.task button {
+    margin-top: 10px;
+    margin-right: 10px;
+    font-size: 13px;
+}
+
+.task button:first-of-type {
+    background: #667eea;
+    color: white;
+}
+
+.task button:first-of-type:hover {
+    background: #5a67d8;
+}
+
+.task button:last-of-type {
+    background: #ff4d4d;
+    color: white;
+}
+
+.task button:last-of-type:hover {
+    background: #e60000;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    input,
+    select {
+        width: 90%;
+    }
+
+    .form button {
+        width: 95%;
+        margin-top: 10px;
+    }
+}
